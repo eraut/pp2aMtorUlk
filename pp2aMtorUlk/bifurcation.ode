@@ -1,0 +1,26 @@
+# a model to simulate signal response curves of ULK1-mTOR-PP2A regulatory triangle
+
+# initial condition
+ULK1=0, mTOR=0
+
+#differential equations
+# represents the active form of ULK1
+ULK1' = (kaulk + starv + kaulk'*PP2A)*(ULK1T - ULK1) - kiulk'*mTOR*ULK1
+
+# represents the active form of mTOR
+mTOR' = kamtor*(mTORT-mTOR) - (starv + kimtor + kimtor'*ULK1 + kimtor"*PP2A)*mTOR
+
+# represents the active form of PP2A
+PP2A = (kapp2 + kapp2'*ULK1)*PP2AT/(kapp2 + kapp2'*ULK1 + kipp2 + kipp2'*mTOR) 
+
+# parameters
+# simulating rapamycin treatment: mTORT = 0.5
+# simulating starvation: starv = 0.1
+# simulating ocadaic acid treatment: PP2AT = 0.3
+# simulating silencing PP2A with siRNA: PP2AT = 0.1
+p starv=0
+p kaulk=0, kaulk'=1, kiulk'=1, ULK1T=1
+p kamtor=1.5, kimtor=0.01, kimtor'=50, kimtor"=20, mTORT=1.5
+p kapp2=0.15, kapp2'=2.5, kipp2=0.15, kipp2'=25, PP2AT=1
+
+done
