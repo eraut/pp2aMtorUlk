@@ -8,14 +8,12 @@ then run
 
 `pip install numpy, scipy`
 
-### Parameter estimation
+## Parameter estimation
 
 It requieres `matplotlib` `pandas` python packages as well. To install them run
 
 
 `pip install pandas, matplotlib`
-
-For testing and debugging Postman was used. Download and install [Postman](https://www.getpostman.com/apps)
 
 The test collection has been uploaded as `beerList.postman_collection.json`. (file got modified, becouse some NSFW words got trough testing, they got changed to "gamer" with vim search and replace :) )
 
