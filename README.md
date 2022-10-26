@@ -15,7 +15,6 @@ It requieres `matplotlib` `pandas` python packages as well. To install them run
 
 `pip install pandas, matplotlib`
 
-The test collection has been uploaded as `beerList.postman_collection.json`. (file got modified, becouse some NSFW words got trough testing, they got changed to "gamer" with vim search and replace :) )
 
 ## Structural identifiability
 to run `paramEst/identif.jl` [julia](https://julialang.org/) is requiered. Then run julia and install the requiered packages
